@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li>node1</li>
+        <li>node2</li>
+        <li>node3</li>
+        <li>node4</li>
+    </ol>
+
+    <script>
+        var ol = document.querySelector('ol');
+        //1.parentNode.firstChild和parentNode.lastChild
+        console.log(ol.firstChild);
+        console.log(ol.lastChild);
+
+        //2.parentNode.firstElementChild。注意element，说明是只获取第一个元素节点
+        console.log(ol.firstElementChild);//兼容性
+        console.log(ol.lastElementChild);//兼容性
+
+        //3.parentNode.children[index];通过子元素的索引获取,设计开发最常用
+        console.log(ol.children[0]);//获取第一个子元素
+        console.log(ol.children[ol.children.length - 1]);//获取last子元素
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 思路：先定义两个变量用prompt保存，再用一个变量保存前面保存的两个变量的和，
+        // 因为prompt输出的是字符串，所以输出alert时要用Number()
+        // 转变为数字型才能算出相加的结果，当然还有其它转换。
+        var firstNumber = prompt("请输入第一个数：");//输出的是字符串
+        var secNum = prompt("第二个数：");
+        alert(Number(firstNumber) + Number(secNum));
+    </script>
+</body>
+
+</html>

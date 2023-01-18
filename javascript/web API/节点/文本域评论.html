@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul>li {
+            /* list-style: none; */
+            background-color: pink;
+            width: 410px;
+            margin-left: 360px;
+            margin-bottom: 10px;
+        }
+
+        li a {
+            float: right;
+            text-decoration: none;
+            color: black;
+        }
+
+        textarea {
+            /* margin: 100px; */
+            margin-left: 400px;
+            margin-top: 100px;
+            outline: none;
+            border: 2px solid pink;
+        }
+
+        button {
+            margin-left: 767px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <textarea name="pinglun" id="" cols="60" rows="10"></textarea>
+    </div>
+    <button>发布</button>
+    <ul>
+
+    </ul>
+
+    <script>
+        //获取
+        var text = document.querySelector('textarea');
+        var btn = document.querySelector('button');
+        console.log(btn);
+        var ul = document.querySelector('ul');
+        //注册事件
+        btn.onclick = function () {
+            if (text.value == '') {
+                alert('您没有输入内容！');
+                return false;
+            } else {
+                var li = document.createElement('li');
+                li.innerHTML = text.value + "<a href='javascipt:;'>删除</a>";
+                ul.insertBefore(li, ul.children[0]);
+                var as = document.querySelectorAll('a');
+                for (var i = 0; i < as.length; i++) {
+                    as[i].onclick = function () {
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

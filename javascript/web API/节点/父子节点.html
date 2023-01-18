@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>000000000</li>
+            <li>000000000</li>
+            <li>000000000</li>
+            <li>000000000</li>
+        </ul>
+
+        <div class="box">
+            <span class="erweima">x</span>
+        </div>
+    </div>
+
+    <script>
+        //1.子————————>父 childNodes.parentNode
+        var erweima = document.querySelector('.erweima');//获取子元素
+        var box = document.querySelector('.box');//旧，获取父节点
+        var par = erweima.parentNode; //新，从子元素获取父节点
+        //注意，childrenNodes.parentNode获取的父元素是最近的父级节点（亲爸爸），遵循就近原则
+        console.log(par);
+        console.log('-------------');
+
+        //2.父————————>子 parentNode.childNodes（获取全部）一般不推荐使用！
+        //如果非要使用这个又只想获取子元素，可以用一个for循环获取元素的节点属性nodeType
+        //parentNodes.children(只获取子元素)，非标准，但推荐使用！
+        var ul = document.querySelector('ul');
+        console.log(ul.childNodes);//所有的childNodes包含有文本，空格，换行节点
+        console.log(ul.children);//从父元素获取子节点，没有文本，空格，换行
+    </script>
+</body>
+
+</html>

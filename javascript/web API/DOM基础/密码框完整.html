@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 350px;
+            height: 100px;
+            /* background-color: #ccc; */
+            margin: 100px auto;
+        }
+
+        input {
+            float: left;
+            /* display: flex; */
+        }
+
+        .wrong {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="password" class="ipt">
+        <p class="msg">请输入6到16位的密码</p>
+    </div>
+
+    <script>
+        //获取元素
+        var ipt = document.querySelector('.ipt');
+        // console.log(ipt)
+        var msg = document.querySelector('.msg');
+        ipt.onblur = function () {
+            if (ipt.value.length < 6 || ipt.value.length > 16) {
+                msg.className = 'wrong';
+                msg.innerHTML = '位数不对！';
+            } else {
+                msg.className = 'msg right';
+                msg.innerHTML = '输入正确！';
+            }
+        }
+    </script>
+</body>
+
+</html>

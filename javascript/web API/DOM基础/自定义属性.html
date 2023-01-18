@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div data-index="21" data-gettime="32"></div>
+    <script>
+        var div = document.querySelector('div');
+        console.log(div.id);
+        console.log(div.getAttribute('id'));
+        console.log(div.getAttribute('index'));
+        //设置元素属性值
+        console.log(div.setAttribute('index', 666));
+        console.log(div.setAttribute('class', 444));
+        //移除属性
+        div.removeAttribute('index')
+        console.log(div.getAttribute('data-index'));
+        console.log(div.dataset);
+        console.log(div.dataset.index);
+
+    </script>
+</body>
+
+</html>

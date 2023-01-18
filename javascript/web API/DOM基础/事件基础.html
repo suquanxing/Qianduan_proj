@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        p {
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 事件源 -->
+    <button>显示当前时间</button>
+    <div>某个时间</div>
+    <p>五毒风火轮</p>
+
+
+    <script>
+        // var btn = document.getElementById('btn');//时间处理机制
+        // btn.onclick = function () {
+        // console.log('我被选中了');
+        // }
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        btn.onclick = function () {
+            div.innerText = '2022年-09-18';
+        }
+        var p = document.querySelector('p');
+        p.innerText = '2022年-09-18';
+
+    </script>
+</body>
+
+</html>

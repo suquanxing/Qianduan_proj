@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul,
+        li {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .box>li {
+            float: left;
+            height: 25px;
+            width: 60px;
+            padding: 4px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 25px;
+        }
+
+        .box ul {
+            height: 100px;
+            width: 68px;
+        }
+
+        .box ul li {
+            padding: 4px;
+            border: 1px solid pink;
+        }
+
+        .box ul li:first-child {
+            border-top: 0;
+        }
+
+        .box ul li:hover {
+            background-color: pink;
+        }
+
+        .box a:hover {
+            color: rgb(189, 27, 27);
+        }
+
+        /* 让下拉列表先隐藏 */
+        .box ul {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="box">
+        <li class="weibo">
+            <a href="#">微博</a>
+            <ul>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">评论</a></li>
+                <li><a href="#">@我</a></li>
+            </ul>
+        </li>
+        <li class="boke">
+            <a href="#">博客</a>
+            <ul>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">写新博客</a></li>
+                <li><a href="#">其他</a></li>
+            </ul>
+        </li>
+        <li class="email">
+            <a href="#">邮箱</a>
+            <ul>
+                <li><a href="#">收件箱</a></li>
+                <li><a href="#">发件箱</a></li>
+                <li><a href="#">消息</a></li>
+            </ul>
+        </li>
+
+    </ul>
+    <script>
+        var box = document.querySelector('.box');
+        console.log(box);
+        var lis = box.children;//获取三个孩子
+        console.log(lis);
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function () {
+                this.children[1].style.display = 'block';
+            }
+            lis[i].onmouseout = function () {
+                this.children[1].style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

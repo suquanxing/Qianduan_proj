@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 240px;
+            height: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./img/海边的女孩.png" alt="">
+    <div>早上好</div>
+    <script>
+        // 获取元素
+        var img = document.querySelector('img');
+        var div = document.querySelector('div');
+        var date = new Date();
+        var h = date.getHours();
+        console.log(h);
+        if (h < 12) {
+            img.src = './img/海边的女孩.png';
+            div.innerHTML = '亲，早上好';
+        } else if (h < 18) {
+            img.src = './img/海边的女孩.png';
+            div.innerHTML = '亲，下午好';
+        } else {
+            img.src = './img/海边的女孩.png';
+            div.innerHTML = '亲，晚上好';
+        }
+    </script>
+</body>
+
+</html>

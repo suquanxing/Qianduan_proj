@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: #ccc;
+        }
+
+        .son {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            background-color: rgb(172, 40, 40);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">
+        </div>
+    </div>
+
+    <script>
+        //1.捕获阶段 第三个参数为true(实际很少使用)
+        //docment-->html-->body-->father-->son
+        var son = document.querySelector('.son');
+        son.addEventListener('click', function () {
+            alert('我是son');
+        }, true);
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function () {
+            alert('我是father');
+        }, true);
+
+        //2.冒泡阶段 第三个参数是false或没有，则处于冒泡阶段(实际使用最多)
+        //son-->father-->body-->html-->docment
+        var son = document.querySelector('.son');
+        son.addEventListener('click', function (e) {
+            alert('我是son');
+            e.stopPropagation();//阻止冒泡
+        }, false);
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function () {
+            alert('我是father');
+        }, false);
+    </script>
+</body>
+
+</html>

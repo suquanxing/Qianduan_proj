@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 140px;
+            margin: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>停止定时器</button>
+    <img src="../DOM基础/img/girl.jpg" alt="" class="girl">
+    <script>
+        //setTimeout(function(){},时间定时)
+        var btn = document.querySelector('button');
+        var girl = document.querySelector('.girl');
+        var time = setTimeout(function () {
+            girl.style.display = 'none';
+        }, 5000);
+        btn.addEventListener('click', function () {
+            clearTimeout(time);//清楚定时器 括号里面的是定时器的id
+        })
+
+    </script>
+</body>
+
+</html>

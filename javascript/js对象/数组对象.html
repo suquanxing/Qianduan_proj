@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //var arr=new Array();//创建一个空的数组对象arr，也可以说是对象的实例
+        //var arr = new Array(5);//创建了一个数组并说明数组的长度是5，里面有5个空元素
+        //console.log(arr);
+
+        var arr = [1, 2, 3, 4];
+        console.log(typeof arr);
+        arr.push(5, 'rencai');
+        console.log(arr.push());//push完之后返回值是数组的长度
+        console.log(arr);
+        xinzeng = arr.unshift(12, 21, 43);
+        console.log(xinzeng);//返回的函数新增的数组的长度
+        console.log(arr);
+        console.log(arr.pop());
+        console.log(arr);
+
+        var arr1 = [1900, 2034, 4302, 1890, 3092];
+        var newArr = [];
+        for (var i = 0; i < arr1.length; i++) {
+            if (arr1[i] < 2000) {
+                newArr.push(arr1[i]);
+            }
+        }
+        console.log(newArr);
+        console.log(arr1.reverse());
+        console.log(arr1.sort());
+
+        arr2 = [31, 4, 53, 21, 7, 77];
+        arr2.sort(function (x, y) {
+            return x - y;
+        });
+        console.log(arr2);
+        console.log(arr2.indexOf(21));
+
+        arr3 = [1, 1, 22, 22, 3, 4, 11, 53, 33, 5, 6, 2, 2];
+        console.log(arr3.hashSet());
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

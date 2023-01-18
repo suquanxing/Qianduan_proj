@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            margin: 100px auto;
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        table thead {
+            height: 42px;
+        }
+
+        tr,
+        td,
+        th {
+            border: 1px solid rgb(70, 35, 40);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th><input type="checkbox" id="all"></th>
+            <th>商品</th>
+            <th>价格</th>
+        </thead>
+        <tbody id="single">
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>4</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        //1.获取元素
+        var all = document.getElementById('all');
+        var single = document.getElementById('single').getElementsByTagName('input');
+        //2.注册事件
+        all.onclick = function () {
+            for (var i = 0; i < single.length; i++) {
+                single[i].checked = all.checked;//总的定事件赋值给小的
+            }
+        }
+        //给每个single绑定一个点击事件，因为有四个，所以用到for循环
+        for (var i = 0; i < single.length; i++) {
+            single[i].onclick = function () {
+                var flag = true;
+                for (var j = 0; j < single.length; j++) {
+                    if (!single[j].checked) {
+                        flag = false;
+                    }
+                }
+                all.checked = flag;
+            }
+        }
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    //  var all = document.getElementById('all');
+    // var single = document.getElementById('single').getElementsByTagName('input');
+    // console.log(single);
+        // all.onclick = function () {
+            // for (var i = 0; i < single.length; i++) {
+                // single[i].checked = this.checked;
+            // }
+        // }
+        // for (var i = 0; i < single.length; i++) {
+            // single[i].onclick = function () {
+                // var flag = true;
+                // for (var i = 0; i < single.length; i++) {
+                    // if (!single[i].checked) {
+                        // flag = false;
+                    // }
+                // }
+                // all.checked = flag;
+            // }
+        // }
+</script>
+
+</html>

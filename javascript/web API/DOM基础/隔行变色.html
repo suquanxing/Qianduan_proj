@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 600px;
+            height: 400px;
+            background-color: #ccc;
+            margin: 100px auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: center;
+            border: 1px solid rgb(46, 29, 87);
+
+
+        }
+
+        thead {
+            background-color: pink;
+            height: 40px;
+            /* border-ri: 1px solid black; */
+        }
+
+        .bg {
+            background-color: rgb(122, 49, 61);
+        }
+    </style>
+</head>
+
+
+<body>
+    <table>
+        <thead>
+            <th>head</th>
+            <th>head</th>
+            <th>head</th>
+            <th>head</th>
+            <th>head</th>
+            <th>head</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var tr = document.querySelector('tbody').querySelectorAll('tr');
+        for (var i = 0; i < tr.length; i++) {
+            tr[i].onmouseover = function () {
+                // console.log(3);
+                this.className = 'bg';
+            }
+            tr[i].onmouseout = function () {
+                this.className = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

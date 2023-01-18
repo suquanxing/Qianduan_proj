@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // num = prompt();
+        // var str = '';
+        // for (var i = 1; i <= num; i++) {
+        // str = str + '*';
+        // }
+        // console.log(str);
+        /*
+        双重for循环的特点就是：外层循环一次，内层循环全部
+        其实很好理解，花括号里面的是循环体，只不过循环体又是一个for循环而已
+        这是第一次
+        第一次；
+        第二次；
+        第三次；
+        这是第二次
+        第一次；
+        第二次；
+        第三次；
+        这是第三次
+        第一次；
+        第二次；
+        第三次；
+        */
+        for (var i = 1; i <= 3; i++) {
+            console.log('这是第' + i + '次');
+            for (var j = 1; j <= 3; j++) {
+                console.log('第' + j + '次');
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

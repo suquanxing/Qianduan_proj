@@ -1,0 +1,79 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.search-index {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    /* 让自身再往回移动一半 */
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;
+    height: 44px;
+    /* background-color: #ccc; */
+}
+
+.search {
+    position: relative;
+    height: 26px;
+    border: 1px solid #ccc;
+    flex: 1;
+    font-size: 12px;
+    line-height: 26px;
+    color: #666;
+    padding-left: 20px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0, 0, .2);
+    background-color: #f6f6f6;
+}
+
+.search::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/sprite.png) no-repeat -59px -279px;
+    background-size: 104px auto;
+    /* margin-top: 5px; */
+}
+
+.user {
+    width: 44px;
+    height: 44px;
+    /* background-color: purple; */
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #2eaae0;
+}
+
+.user::before {
+    content: '';
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/sprite.png) no-repeat -59px -194px;
+    background-size: 104px auto;
+    margin: 4px auto 0;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 固定值用switch，判断范围用if else
+        // switch的执行效率更高，因为它是国定的，
+        // 有固定的值就直接跳到那里，不用按照流程都执行下去
+        var num = 2;
+        switch (num) {
+            case 1:
+                console.log("这是1");
+                break;
+            case 2:
+                console.log('这是2');
+                break;
+            default:
+                console.log('啥也不是');
+        }
+
+        var fruit = prompt('请输入水果：');
+        switch (fruit) {
+            case '苹果':
+                console.log('123');
+                break;
+            case '香蕉':
+                console.log('456');
+                break;
+            case '菠萝':
+                console.log('890');
+                break;
+            default:
+                console.log('没有水果');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

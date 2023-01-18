@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建字面量的形式遍历对象</title>
+    <script>
+        // var obj = {
+        // name: 'suquanxing',
+        // sex: '男',
+        // age: 18,
+        // no: '2019',
+        // learn: function () {
+        // console.log('学习');
+        // }
+        // }
+
+        var obj = new Object();
+        obj.age = 19;
+        obj.sex = '男';
+        obj.name = 'suquanxing';
+
+        for (var key in obj) {
+            console.log(key);
+            console.log(obj[key]);
+        }
+
+        var yellowBook = {
+            content: 20,
+            page: 300,
+            bookName: 'js基础',
+            writer: 'pink老师',
+            read: function () {
+                console.log('学习');
+            }
+        }
+        for (var k in yellowBook) {
+            console.log(k);
+            console.log(yellowBook[k]);
+        }
+
+        var computer = new Object();
+        computer.color = 'yellow';
+        computer.weight = '49kg';
+        computer.brand = '机械革命';
+        computer.model = 's1';
+        computer.watch = function () {
+            console.log('看电影');
+        }
+        computer.listen = function () {
+            console.log('听音乐');
+        }
+        computer.play = function () {
+            console.log('打游戏');
+        }
+        computer.run = function () {
+            console.log('敲代码');
+        }
+        for (var k in computer) {
+            console.log(k);
+            console.log(computer[k]);
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

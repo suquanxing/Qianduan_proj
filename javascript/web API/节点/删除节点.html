@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* text-align: center; */
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            /* background-color: #ccc */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button>删除</button>
+        <ul>
+            <li>光头强</li>
+            <li>胸大</li>
+            <li>熊二</li>
+        </ul>
+    </div>
+    <script>
+        //删除节点,删除的是父节点的子节点
+        //parentNode.removeChild(parentNode.children[index]);
+        var ul = document.querySelector('ul');
+        var btn = document.querySelector('button');
+        // 
+        btn.onclick = function () {
+            if (ul.children.length == 0) {
+                this.disabled = true;
+            } else {
+                ul.removeChild(ul.children[0]);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

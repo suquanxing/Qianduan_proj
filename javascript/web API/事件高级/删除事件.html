@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            margin: 30px auto;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <script>
+        var divs = document.querySelectorAll('div');
+        //1.传统方式删除
+        divs[0].onclick = function () {
+            alert('sb');
+            //解绑
+            divs[0].onclick = null;
+        }
+        //2.removeEventListener删除事件
+        divs[1].addEventListener('click', fn)
+        //这个fn另外写出来，不能是一个匿名函数
+        function fn() {
+            alert('人才');
+            divs[1].removeEventListener('click', fn)
+        }
+    </script>
+</body>
+
+</html>

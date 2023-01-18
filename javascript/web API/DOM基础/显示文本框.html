@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: azure;
+        }
+
+        .box {
+            width: 340px;
+            height: 36px;
+            background-color: #ccc;
+            margin: 100px auto;
+        }
+
+        .box input {
+            float: left;
+            height: 30px;
+            width: 278px;
+            outline: none;
+            border: 2px solid blue;
+            text-indent: 5px;
+            color: #ccc;
+        }
+
+        .btn {
+            float: right;
+            height: 36px;
+            width: 54px;
+            background-color: blue;
+            text-align: center;
+            line-height: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" value="手机">
+        <div class="btn">
+            <a href="#">搜索</a>
+        </div>
+    </div>
+
+    <script>
+        var text = document.querySelector('input');
+        text.onfocus = function () {
+            if (this.value === '手机') {
+                this.value = '';
+            }
+            this.style.color = '#333';
+        }
+        text.onblur = function () {
+            if (this.value === '') {
+                this.value = '手机';
+            }
+            this.style.color = '#ccc';
+        }
+    </script>
+</body>
+
+</html>

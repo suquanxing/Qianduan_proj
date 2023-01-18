@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+        }
+
+        .login-header {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .login {
+            display: none;
+            position: fixed;
+            left: 430px;
+            top: 200px;
+            width: 400px;
+            height: 250px;
+            background-color: rgb(255, 255, 255);
+            /* border-radius: 1%; */
+            margin: 0px auto;
+            /* border: 1px solid burlywood; */
+            box-shadow: 0px 0px 8px white;
+            border-radius: 5%;
+        }
+
+        .zhegai {
+            float: left;
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background: rgba(0, 0, 0, .3);
+            z-index: -1;
+        }
+
+        .vip {
+            position: absolute;
+            width: 400px;
+            height: 60px;
+            line-height: 60px;
+            /* background-color: #ccc; */
+            text-align: center;
+            top: 0px;
+            left: 0px;
+            font-size: large;
+            cursor: move;
+        }
+
+        span {
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            display: block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            z-index: 999;
+            border-radius: 50%;
+        }
+
+        .username {
+            position: absolute;
+            left: 50px;
+            top: 80px;
+        }
+
+        .pwd {
+            position: absolute;
+            left: 35px;
+            top: 135px;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            text-indent: 4px;
+            outline: none;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        .login-vip {
+            position: absolute;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            top: 190px;
+            left: 134px;
+            background-color: #fff;
+            border: 1px #ccc solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-header"><a id="link" href="javascript:;">点击，弹出登录框</a></div>
+    <div class="login">
+        <div class="title">
+            <div class="vip">登录会员</div> <span><a id="closeBtn" style="font-size :16px;"
+                    href="javascript:;">关闭</a></span>
+        </div>
+        <div class="username">
+            用户名：<input type="text" placeholder="请输入用户名">
+        </div>
+        <div class="pwd">
+            登录密码：<input type="password" placeholder="请输入登录密码">
+        </div>
+        <div class="login-vip">
+            <a style="font-size:16px" href="javascript:;">登录会员</a>
+        </div>
+    </div>
+    <div class="zhegai">
+    </div>
+
+
+
+    <script>
+        var login = document.querySelector('.login');
+        var mask = document.querySelector('.zhegai');
+        var link = document.querySelector('#link');
+        var closeBtn = document.querySelector('#closeBtn');
+        var vip = document.querySelector('.vip');
+        link.addEventListener('click', function () {
+            mask.style.display = 'block';
+            login.style.display = 'block';
+        });
+        closeBtn.addEventListener('click', function () {
+            mask.style.display = 'none';
+            login.style.display = 'none';
+        })
+        vip.addEventListener('mousedown', function (e) {
+            var x = e.pageX - login.offsetLeft;
+            var y = e.pageY - login.offsetTop;
+            document.addEventListener('mousemove', move);
+            function move(e) {
+                login.style.left = e.pageX - x + 'px';
+                login.style.top = e.pageY - y + 'px';
+            }
+            document.addEventListener('mouseup', function () {
+                document.removeEventListener('mousemove', move);
+            })
+        })
+    </script>
+</body>
+
+</html>

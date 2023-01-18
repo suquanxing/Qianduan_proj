@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var arr = ['green', 'black', 'pink', 'blue', 'yellow'];
+        // console.log(arr.toString()
+        // console.log(arr.join('-')
+        var str = '改革春风吹满地,天了';
+        console.log(str.indexOf('春', 3));
+        var str1 = 'abcoefoxyozzopp';
+        index = str1.indexOf('o')
+        console.log(index);
+        while (index !== -1) {
+            console.log(index);
+            index = str1.indexOf('o', index + 1);
+        }
+        // console.log('----------------------------');
+        // var str2 = '3, 2, 1, 4, 5, 6, 7, 2, 34, 5, 3, 1, 5';
+        // index5 = str2.indexOf(5);
+        // console.log(index5);
+        // while (index5 !== -1) {
+        // console.log(index5);
+        // index5 = str2.indexOf('5', index + 1);
+        // }
+
+        var str3 = 'andy';
+        console.log(str3.charAt(3));
+        for (var i = 0; i < str3.length; i++) {
+            console.log(str3.charAt(i));
+        }
+
+        var str4 = 'fsahseaklfh';
+        // console.log(str4.replace('f', 'a'));
+        while (str4.indexOf('f') !== -1) {
+            str4 = str4.replace('f', 'a');
+        }
+        console.log(str4);
+        console.log(str4.toUpperCase());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

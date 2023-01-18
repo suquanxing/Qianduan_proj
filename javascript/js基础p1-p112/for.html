@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //计数器i如果符合条件就会被拿走
+        // var sum = prompt("请输入：");
+        // for (var i = 1; i <= 100; i++) {
+        // console.log(sum);}
+        // var sum = 0;
+        // for (var i = 1; i <= 100; i++) {
+        // sum += i;
+        // }
+        // console.log(sum);
+        // console.log(sum / 100);
+
+        // var sumj = 0;
+        // for (var j = 1; j <= 100; j++) {
+        // if (j % 2 == 0) {
+        // sumj += j;
+        // }
+        // }
+        // console.log(sumj);
+
+        //根据学生的人数统计学生成绩的平均分
+        /*业务：先弹出一个输入框，提示用户输入要统计的学生的人数，
+        然后再弹出每一个学生的成绩输入框，最后求和，除以输入的学生人数*/
+
+        //注意！！凡是从prompt取过来的都是字符串型的！！一定要转换类型
+        var stuNum = prompt("请输入学生人数：");//假设输入的是3，弹三次
+        var sum = 0;
+
+        for (i = 1; i <= stuNum; i++) {
+            var score = prompt('请输入第' + i + '个学生的成绩：');
+            sum += parseFloat(score);
+        }
+        alert(sum);
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

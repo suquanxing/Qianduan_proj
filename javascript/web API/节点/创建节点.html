@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点导读</title>
+</head>
+
+<body>
+    <!-- 为什么需要节点操作？逻辑性更强。 -->
+    <!-- nodetype -->
+    <!-- 元素节点：1 -->
+    <!-- 属性节点：2 -->
+    <!-- 文本节点：3（包括空格，换行，文字） -->
+    <!-- 节点操作主要是操作元素节点 ，主要把标签获取-->
+    <!-- dom树层级关系主要有父子兄节点 -->
+
+    <ul>
+        <li>123</li>
+    </ul>
+    <script>
+        // append：追加
+        //创建节点有两个步骤：
+        //1.首先要创建子元素节点
+        //2.子元素节点添加给哪个父元素的哪个位置
+        var ul = document.querySelector('ul');
+        var li = document.createElement('li');//创建要添加的子元素
+        ul.appendChild(li);//在相对于当前子元素的后面添加
+        var lili = document.createElement('li');//创建
+        ul.insertBefore(lili, ul.children[0]);//在孩子的前面添加，后面的参数是确定位置
+    </script>
+</body>
+
+</html>

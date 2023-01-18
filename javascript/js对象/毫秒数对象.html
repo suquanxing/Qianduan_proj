@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var date = new Date();
+        console.log(date.valueOf());
+        console.log(date.getTime());
+        console.log(+new Date());
+        console.log(Date.now());//内置对象
+
+        function countDown(time) {
+            var nowTime = +new Date();
+            var inputTime = +new Date(time);
+            var times = (inputTime - nowTime) / 1000;
+            var d = parseInt(times / 60 / 60 / 24);
+            var h = parseInt(times / 60 / 60 % 24);
+            var m = parseInt(times / 60 % 60);
+            var s = parseInt(times % 60);
+            return d + '天' + h + '时' + m + '分';
+        }
+        console.log(countDown('2022-09-14 19:45:00'));
+
+
+    </script>
+</body>
+
+</html>

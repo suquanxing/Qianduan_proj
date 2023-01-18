@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Musical Christmas Lights</title>
+  <link rel="stylesheet" href="./style/normalize.min.css">
+  <link rel="stylesheet" href="./style/style.css">
+
+</head>
+
+<body>
+  <!--引入js文件-->
+  <script src="./js/three.min.js"></script>
+  <script src="./js/EffectComposer.js"></script>
+  <script src="./js/RenderPass.js"></script>
+  <script src="./js/ShaderPass.js"></script>
+  <script src="./js/CopyShader.js"></script>
+  <script src="./js/LuminosityHighPassShader.js"></script>
+  <script src="./js/UnrealBloomPass.js"></script>
+
+  <div id="overlay">
+    <ul>
+      <li class="title">选择音乐</li>
+      <li>
+        <button class="btn" id="btnA" type="button">
+          _Snowflakes
+        </button>
+      </li>
+      <li><button class="btn" id="btnB" type="button">Christmas</button></li>
+      <li><button class="btn" id="btnC" type="button">No room at the inn </button></li>
+      <li><button class="btn" id="btnD" type="button">Jingle Bell Swing </button></li>
+      <li class="separator">你还可以</li>
+      <li>
+        <input type="file" id="upload" hidden />
+        <label for="upload">上传本地音乐</label>
+      </li>
+    </ul>
+  </div>
+  <!-- partial -->
+  <script src="./style/script.js"></script>
+
+</body>
+
+</html>

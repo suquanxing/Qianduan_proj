@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <button class="b1">存储</button>
+    <button class="b2">获取</button>
+    <button class="b3">移除</button>
+    <button class="b4">2</button>
+    <script>
+        var input = document.querySelector('input');
+        var b1 = document.querySelector('.b1')
+        var b2 = document.querySelector('.b2')
+        var b3 = document.querySelector('.b3')
+        var b4 = document.querySelector('.b4')
+        b1.addEventListener('click', function () {
+            var val = input.value;
+            localStorage.setItem('username', val);
+        });
+        b2.addEventListener('click', function () {
+            console.log(localStorage.getItem('username'));;
+        })
+    </script>
+</body>
+
+</html>

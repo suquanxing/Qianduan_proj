@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        22222
+    </div>
+
+    <ul>
+        <li>333</li>
+        <li>333</li>
+        <li>333</li>
+        <li>333</li>
+    </ul>
+    <script>
+        div = document.querySelector('div');
+        div.addEventListener('click', function (e) {
+            console.log(e.target);
+            console.log(this);
+        })
+
+        ul = document.querySelector('ul');
+        ul.addEventListener('click', function (e) {
+            console.log(e.target);//指向触发事件的事件，点了谁，就return谁
+            console.log(this);//指向绑定事件ul
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄弟节点</title>
+</head>
+
+<body>
+    <div>111111</div>
+    <span>22222</span>
+    <script>
+        var div = document.querySelector('div');
+        console.log(div.previousSibling);//获取上一个换行
+        console.log(div.nextSibling);//只是得到一个换行
+        console.log(div.nextElementSibling);//获取兄弟元素（兼容性）
+        console.log(div.previousElementSibling);//获取上一个兄弟元素（兼容性）
+    </script>
+</body>
+
+</html>

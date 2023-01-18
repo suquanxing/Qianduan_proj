@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            //基本语法
+             function 构造函数名() {
+                 this.属性 = 值;
+                 this.方法 = function () {
+     
+                 }
+             }
+             new 构造函数名();
+        */
+        //例子 构造函数名首字母要大写
+        //构造函数不需要return 返回值
+        //构造函数的属性和方法前面必须要加this,this表示类实例本身，表示对当前对象的引用
+        function Star(age, sex, name) {
+            this.age = age;
+            this.sex = sex;
+            this.name = name;
+            this.sing = function (song) {
+                console.log(song);
+            }
+        }
+        var lx = new Star(18, '男', '流星');
+        console.log(lx.age);
+        console.log(lx.name);
+        console.log(lx);
+        var sqx = new Star(34, 'nv', '迪丽热巴')
+        console.log(sqx.age);
+        console.log(sqx.name);
+        sqx.sing('bingyu');
+
+
+        //用构造函数封装一个类，里面指定当前对象的属性和方法
+        function Hero(name, type, blood) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function (distance) {
+                console.log(distance);
+            }
+        }
+        //用new关键字创建一个类的对象
+        var lianpo = new Hero('廉颇', '力量型', '500血量');
+        console.log(lianpo.name);
+        console.log(lianpo.type);
+        console.log(lianpo.blood);
+        lianpo.attack('近战');
+        console.log(typeof lianpo);
+
+        var houyi = new Hero('后羿', '射手', '100血量');
+        console.log(houyi.name);
+        console.log(houyi.type);
+        console.log(houyi.blood);
+        houyi.attack('远攻');
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
